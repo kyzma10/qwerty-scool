@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Lobster|Pacifico');
+
 @media (min-width: 1170px) {
 
   .top-menu li {
@@ -178,7 +180,7 @@
   }
 
   .sidebar {
-    display: none;
+    background-color: #7f8c8d;
   }
 
   .content-box .sidebar ul {
@@ -248,17 +250,88 @@ input[type="submit"]:hover {
   background-color: #2ecc71;
 }
 
+input[type="image"] {
+  width: 150px;
+  height: auto;
+  position: relative;
+  right: -20%;
+  top: 0px;
+  margin-bottom: -30px;
+  display: block;
+}
+
+input[type="number"] {
+  display: block;
+  width: 70%;
+  border-radius: 5px;
+  margin: 10px 5px;
+}
+
+.check-color input[type="checkbox"] {
+  display: block;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.check-color label {
+  margin-left: 10px;
+  color: #fff;
+}
+
+img.show-hide {
+  width: 150px;
+  height: auto;
+  position: relative;
+  right: -20%;
+  top: 0px;
+  display: block;
+}
+
+.sidebar {
+  opacity: 1;
+  height: 600px;
+  transition: opacity 5.3s, height 4.3s;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 5.3s, height 4.5s;
+}
+
+.sidebar select {
+  margin: 10px 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.sidebar button {
+  margin: 10px;
+  padding: 10px;
+  background-color: #4a7bbd;
+  border-radius: 5px;
+  color: #fff;
+  width: 70%;
+  font-weight: bold;
+}
+
 .content-box .sidebar li:hover {
   background-color: #2ecc71;
 }
 
 .content-box {
   flex: 1;
+  height: auto;
 }
 
 .copyright {
+  display: block;
   float: left;
   margin-left: 20px;
+  margin-top: 25px;
   font-weight: bold;
 }
 

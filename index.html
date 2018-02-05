@@ -52,7 +52,7 @@
           quam. Interdum et malesuada fames ac ante ipsum primis in faucibus.
         </p>
 
-        <blockquote><p>Mauris in eros venenatis, cursus urna non, tristique nibh. Donec sodales quam
+        <p>Mauris in eros venenatis, cursus urna non, tristique nibh. Donec sodales quam
           purus, vel tincidunt velit aliquet quis. Nullam fringilla dignissim urna,
           vel fringilla eros eleifend ultrices. Pellentesque at lorem nunc. Pellentesque
           habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -64,10 +64,12 @@
           tincidunt, sem ut aliquam aliquam, sapien lacus rhoncus felis, at vulputate
           erat magna rhoncus dui. Vivamus posuere nisl augue, eu interdum est aliquet
           eget. Aenean id mattis nisl.</p>
-        </blockquote>
 
       </div>
-      <div class="sidebar">
+
+      <img  id="burger" class="show-hide" src="img/menu-button.gif" alt="button click">
+
+      <div id="sidebar-right" class="sidebar">
         <ul>
           <li><a>Item1</a></li>
           <li><a>Item2</a></li>
@@ -75,15 +77,43 @@
           <li><a>Item4</a></li>
           <li><a>Item5</a></li>
         </ul>
+        <form name="formSidebar">
+
+          <input name="fontGetSize" type="number" placeholder="value must be  8 -24">
+
+          <div class="check-color">
+            <label>red</label>
+            <input name="red" type="checkbox" value="red">
+            <label>green</label>
+            <input name="green" type="checkbox" value="green">
+            <label>blue</label>
+            <input name="blue" type="checkbox" value="blue">
+            <label>yellow</label>
+            <input name="yellow" type="checkbox" value="yellow">
+            <label>purple</label>
+            <input name="purple" type="checkbox" value="purple">
+          </div>
+          
+          <select name="fontSetFamily">
+            <option selected="selected">Select font for teg"p"</option>
+            <option value="Anton">Anton</option>
+            <option value="Lobster">Lobster</option>
+            <option value="Pacifico">Pacifico</option>
+          </select>
+
+        </form>
+        <button type="button" onclick="delLastP()">Delete last p</button>
     </div>
     </div>
 
     <footer class=" footer clearfix">
-      <p class="copyright">Copiright&copy; 2018</p>
+      <span class="copyright">Copiright&copy; 2018</span>
       <div class="social social-fb"></div>
       <div class="social social-tw"></div>
       <div class="social social-g"></div>
 
     </footer>
+
+    <script src="js/mainScript.js"></script>
   </body>
 </html>
