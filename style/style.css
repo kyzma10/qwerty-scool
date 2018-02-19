@@ -58,6 +58,17 @@
     color: #fff;
     width: 80%;
   }
+
+  #signup {
+  margin-left: 10px; background-color: #1abc9c;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #7f8c8d;
+  border-radius: 5px;
+  width: 20%;
+  padding: 5px;
+}
+
 }
 
 @media(min-width: 500px) and (max-width: 1170px) {
@@ -118,6 +129,17 @@
     color: #fff;
     width: 80%;
   }
+
+  #signup {
+  margin-left: 10px; background-color: #1abc9c;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #7f8c8d;
+  border-radius: 5px;
+  width: 20%;
+  padding: 5px;
+}
+
 }
 
 @media(min-width: 250px) and (max-width: 500px) {
@@ -166,6 +188,19 @@
     margin: 0 auto;
     margin-top: 10px;
     font-size: 0.8em;
+  }
+
+  #signup {
+    margin-left: 10px; background-color: #1abc9c;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    width: 60%;
+    padding: 5px;
+    font-size: 0.8em;
+    margin: 0 auto;
+    margin-top: 10px;
   }
 
   .content {
@@ -221,6 +256,12 @@ input[type="submit"] {
   border: 1px solid #7f8c8d;
 }
 
+#signup:hover {
+  background-color: #2ecc71;
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+}
+
 input[type="submit"]:hover {
   background-color: #2ecc71;
   border-bottom: 2px solid #333;
@@ -268,9 +309,9 @@ input[type="number"] {
 }
 
 .check-color input[type="checkbox"] {
-  display: block;
-  margin-left: 10px;
-  margin-top: 10px;
+  display: inline-block;
+/*  margin-left: 10px;
+  margin-top: 10px;*/
 }
 
 .check-color label {
@@ -299,7 +340,7 @@ img.show-hide {
   opacity: 0;
   height: 0;
   overflow: hidden;
-  transition: opacity 5.3s, height 4.5s;
+  transition: opacity 1s, height 5s;
 }
 
 .sidebar select {
@@ -374,4 +415,9 @@ img.show-hide {
   text-align: center;
   background-color: #7f8c8d;
   color: #fff;
+}
+
+
+#register-box {
+  display: none;
 }

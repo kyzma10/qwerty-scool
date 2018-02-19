@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
   </head>
   <body>
 
@@ -21,9 +22,18 @@
         <li><a>Item5</a></li>
       </ul>
       <form class="logined">
-          <input type="text" placeholder="login">
-          <input type="password">
-          <input type="submit" value="Logined">
+          <div id="auth-box">
+            <input id="auth_login" type="text" placeholder="login" required>
+            <input id="auth_password" type="password" placeholder="your password" required>
+            <input id="auth" type="submit" value="Auth">
+            <button id="signup">Sign Up</button>
+          </div>
+          <div id="register-box">
+            <input id="register_login" type="text" placeholder="login" required>
+            <input id="register_password" type="password" placeholder="your password" required>
+            <input id="register_confirm" type="password" placeholder="confirm password" required>
+            <input id="register" type="submit" value="Register">
+          </div>
       </form>
     </header>
 
@@ -82,18 +92,30 @@
           <input name="fontGetSize" type="number" placeholder="value must be  8 -24">
 
           <div class="check-color">
-            <label>red</label>
-            <input name="red" type="checkbox" value="red">
-            <label>green</label>
-            <input name="green" type="checkbox" value="green">
-            <label>blue</label>
-            <input name="blue" type="checkbox" value="blue">
-            <label>yellow</label>
-            <input name="yellow" type="checkbox" value="yellow">
-            <label>purple</label>
-            <input name="purple" type="checkbox" value="purple">
+            <span>
+              <label>red</label>
+              <input name="red" type="checkbox" value="red">
+            </span>
+            <span>
+              <label>green</label>
+              <input name="green" type="checkbox" value="green">
+            </span>
+            <br />
+            <span>
+              <label>blue</label>
+              <input name="blue" type="checkbox" value="blue">
+            </span>
+            <span>
+              <label>yellow</label>
+              <input name="yellow" type="checkbox" value="yellow">
+            </span>
+            <br />
+           <span>
+              <label>purple</label>
+              <input name="purple" type="checkbox" value="purple">
+           </span>
           </div>
-          
+
           <select name="fontSetFamily">
             <option selected="selected">Select font for teg"p"</option>
             <option value="Anton">Anton</option>
@@ -102,7 +124,7 @@
           </select>
 
         </form>
-        <button type="button" onclick="delLastP()">Delete last p</button>
+        <button type="button" id="dellLastP">Delete last p</button>
     </div>
     </div>
 
@@ -114,6 +136,19 @@
 
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAI3go-xescxr2MIB4n2NY0hjs1w-pmiuA",
+        authDomain: "app-fire-3b127.firebaseapp.com",
+        databaseURL: "https://app-fire-3b127.firebaseio.com",
+        projectId: "app-fire-3b127",
+        storageBucket: "",
+        messagingSenderId: "125244479342"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/mainScript.js"></script>
   </body>
 </html>
