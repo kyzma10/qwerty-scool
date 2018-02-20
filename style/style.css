@@ -319,13 +319,18 @@ input[type="number"] {
   color: #fff;
 }
 
-img.show-hide {
-  width: 150px;
+.show-hide button {
+  width: 200px;
   height: auto;
   position: relative;
   right: -20%;
   top: 0px;
-  display: block;
+  margin: 10px;
+  padding: 10px;
+  background-color: #4a7bbd;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
 }
 
 .sidebar {

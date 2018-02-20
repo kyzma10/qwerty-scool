@@ -21,20 +21,20 @@
         <li><a>Item4</a></li>
         <li><a>Item5</a></li>
       </ul>
-      <form class="logined">
-          <div id="auth-box">
+      <div class="logined">
+          <form id="auth-box">
             <input id="auth_login" type="text" placeholder="login" required>
             <input id="auth_password" type="password" placeholder="your password" required>
             <input id="auth" type="submit" value="Auth">
             <button id="signup">Sign Up</button>
-          </div>
-          <div id="register-box">
+          </form>
+          <form id="register-box">
             <input id="register_login" type="text" placeholder="login" required>
             <input id="register_password" type="password" placeholder="your password" required>
             <input id="register_confirm" type="password" placeholder="confirm password" required>
             <input id="register" type="submit" value="Register">
-          </div>
-      </form>
+          </form>
+      </div>
     </header>
 
     <div class="content-box clearfix">
@@ -77,7 +77,9 @@
 
       </div>
 
-      <img  id="burger" class="show-hide" src="img/menu-button.gif" alt="button click">
+      <div class="show-hide">
+        <button id="burger" type="button" name="button">Show/hide panel</button>
+      </div>
 
       <div id="sidebar-right" class="sidebar">
         <ul>

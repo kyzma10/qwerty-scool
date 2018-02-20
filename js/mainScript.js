@@ -1,6 +1,6 @@
 window.onload = () => {
 
-	$('#signup').click ( (e) => {
+	$('#signup').on ('click', (e) => {
 		e.preventDefault();
 		$('#register-box').show();
 		$('#auth-box').hide();
@@ -9,17 +9,20 @@ window.onload = () => {
 
 	$('#register').on ('click', (e) => {
 		e.preventDefault();
-		const userName = $('#register_login').val();
-		const userPassword = $('#register_password').val();
-		const userPassConfirm = $('#register_confirm').val();
+		const userName = ($('#register_login').val()).trim();
+		const userPassword = ($('#register_password').val()).trim();
+		const userPassConfirm = ($('#register_confirm').val()).trim();
 
-		if (userName !== ' ' && userPassword !== ' ' && userPassConfirm !== ' ') {
-			if (userPassword === userPassConfirm) {
+		if (!userName || !userPassword || !userPassConfirm) {
+			alert('Incorrectly data!');
+		}
+		else {
+			if (userName && userPassword === userPassConfirm) {
 				localStorage.setItem('userName', userName);
 				localStorage.setItem('userPassword', userPassword);
 			}
-
-			else alert('Wrong!');
+			else
+				alert('Passwords do not match!');
 		}
 		$('#register-box').hide();
 		$('#auth-box').show();
@@ -32,12 +35,13 @@ window.onload = () => {
 		let userPassword = $('#auth_password').val();
 
 		if (localStorage.userName !== userName || localStorage.userPassword !== userPassword) {
-			alert('not right data');
+			alert('Not a valid username or(and) password!');
 		}
 		else if (localStorage.userName === userName && localStorage.userPassword === userPassword) {
-			$('form.logined').remove();
+			$('div.logined').remove();
 			$('header').append("<div class='logined'><h3 id='user-logined'>HI USER: " + userName + "</h3></div>");
 
+			/*add functional sidebar */
 			const formSidebar = document.forms.formSidebar;
 			const sidebar = document.getElementById('sidebar-right');
 			const allP = document.querySelectorAll('p');
@@ -78,10 +82,10 @@ window.onload = () => {
 			}
 
 			formSidebar.elements.red.onclick = setColor;
-			formSidebar.elements.green.onclick =setColor;
-			formSidebar.elements.blue.onclick =setColor;
-			formSidebar.elements.yellow.onclick =setColor;
-			formSidebar.elements.purple.onclick =setColor;
+			formSidebar.elements.green.onclick = setColor;
+			formSidebar.elements.blue.onclick = setColor;
+			formSidebar.elements.yellow.onclick = setColor;
+			formSidebar.elements.purple.onclick = setColor;
 
 			const fontFamily = formSidebar.elements.fontSetFamily;
 			fontFamily.onchange = setFont;
@@ -123,8 +127,5 @@ window.onload = () => {
 		else {
 			alert('You must be register!');
 		}
-
-		userName = '';
-		userPassword = '';
 	});
 }
